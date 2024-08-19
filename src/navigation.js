@@ -32,7 +32,7 @@ export const headerData = {
         },
         {
           text: 'Services',
-          href: getPermalink('/services'),
+          href: getPermalink('/#blueprint'),
         },
         {
           text: 'Pricing',

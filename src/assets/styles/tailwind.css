@@ -5,9 +5,11 @@
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
+    background-color: #435d90;
   }
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
+    background-color: #435d90;
   }
   .bg-light {
     background-color: var(--aw-color-bg-page);

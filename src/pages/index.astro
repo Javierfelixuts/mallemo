@@ -24,7 +24,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'More Information',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
         icon: 'tabler:download',
@@ -34,8 +34,10 @@ const metadata = {
     image={{ src: '~/assets/images/sala.jpg', alt: 'house for remodeling' }}
   >
     <Fragment slot="title">
-      Purchase of <span class="hidden xl:inline"></span>
+      
+      <span class="uppercase">Purchase of 
       <span class="text-accent dark:text-white highlight"> dilapidated</span> house for remodeling
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -52,45 +54,44 @@ const metadata = {
 
   <Features
     id="features"
-    tagline="Features"
     title="What we offer"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Exclusive Properties for Sale',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Explore our selection of exclusive properties in prime locations. From luxurious homes to modern apartments, find your dream home with us.',
+        icon: 'tabler:report-money',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Residential and Commercial Rentals',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'We offer rental options tailored to your needs. Discover a variety of homes, offices, and commercial spaces in the most convenient areas.',
+        icon: 'tabler:home',
       },
       {
-        title: 'Best Practices',
+        title: 'Real Estate Investment Consulting',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Maximize your investments with our real estate experts. We help you identify profitable opportunities and make informed decisions in the property market.',
+        icon: 'tabler:mood-puzzled',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Property Management Services',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Leave the management of your properties to professionals. We handle administration, maintenance, and leasing, so you can enjoy your rental income without any hassle.',
+        icon: 'tabler:checkup-list',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Construction and Development Projects',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          " Engage in innovative construction and development projects. From planning to execution, we guide you every step of the way to ensure the success of your investment.",
+        icon: 'tabler:backhoe',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Property Valuation and Appraisal',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          ' Get an accurate and reliable appraisal of your property. Our experts provide detailed valuations based on the current market, giving you confidence in your decisions.',
+        icon: 'tabler:brand-cashapp',
       },
     ]}
   />
@@ -98,6 +99,7 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    id="blueprint"
     isReversed
     tagline="Inside template"
     title="AstroWind's Blueprint: Fun Meets Functionality!"
