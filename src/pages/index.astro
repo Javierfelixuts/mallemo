@@ -3,13 +3,10 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
+import Slider from '~/components/Slider';
 
 const metadata = {
   title: 'Mallemo Trading LLC',
@@ -21,19 +18,20 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    id='home'
     actions={[
       {
-        variant: 'primary',
+        variant: 'secondary',
         text: 'More Information',
-        href: 'https://github.com/onwidget/Mallemo',
+        href: 'https://api.whatsapp.com/send?phone=5205856477',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-whatsapp',
       },
-      { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/sala.jpg', alt: 'house for remodeling' }}
+    image={{ src: '~/assets/images/clean-house-03.jpeg', alt: 'house for remodeling' }}
   >
-    <Fragment slot="title">
+    <Fragment 
+      slot="title">
       
       <span class="uppercase">Purchase of 
       <span class="text-accent dark:text-white highlight"> dilapidated</span> house for remodeling
@@ -47,15 +45,52 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <FAQs
+    title='ABOUT US'
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Mision',
+        description:
+          "To transform properties into exceptional homes, creating value for our clients trough innovative and sustainable remodels that enhace quality of life and revitalize communities.",
+      },
+      {
+        title: 'Vision',
+        description:
+          'To be a leading company in the renovation and sale of properties, recognized for our excellence in design, construction quality and ability to turn houses into desirable homes, contributing to urban development and the creation of more livable spaces.',
+      },
+      {
+        title: 'Goals',
+        description:
+          "Quality in Remodeling: To ensure that each remodeled property meets the highest standards of quality, functionality and aesthetics, exceeding our client’s expectations.",
+      },
+      {
+        title: "Sustainable Growth",
+        description:
+          "Expand our presence in the real estate market through strategic acquisitions, while maintaining solid and sustainable financial growth.",
+      },
+      {
+        title: 'Innovation in Design',
+        description:
+          " Incorporate the latest trends and technologies in our remodeling to offer modern, efficient and high value-added properties.",
+      },
+      {
+        title: 'Community Contribution',
+        description:
+          "Revitalize communities through the improvement of aging properties, contributing to the revaluation of urban areas and the creation of safer and more attractive environments.",
+      },
+    ]}
+  />
+
   <!-- Note Widget ******************* -->
 
 
   <!-- Features Widget *************** -->
-
+   <Slider client:visible ></Slider>
+  
   <Features
     id="services"
     title="What we offer"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
       {
         title: 'Exclusive Properties for Sale',
@@ -95,33 +130,33 @@ const metadata = {
       },
     ]}
   />
-
+<!-- Swiper -->
+ 
   <!-- Content Widget **************** -->
 
   <Content
     id="about"
     isReversed
-    tagline="Inside template"
     title="Mallemo's Blueprint: Fun Meets Functionality!"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
+        title: 'Built on top',
         description:
           'Benefiting from the performance and developer-friendly features of this modern static site generator.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Styled',
         description:
           'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Compatibility',
         description:
           'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
       },
     ]}
     image={{
-      src: '~/assets/images/dirty-house-01.jpg',
+      src: '~/assets/images/clean-house.jpeg',
       alt: 'Colorful Image',
     }}
   >
@@ -172,212 +207,22 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with Mallemo.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing Mallemo community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/modern-house-02.jpg',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with Mallemo."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the Mallemo template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by Mallemo! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display Mallemo documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that Mallemo offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why Mallemo?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
       { title: 'Stars', amount: '24.8K' },
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
-
+<div class="flex justify-center items-center flex-wrap">
 
 
   <ContactUs
     id="contact"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
     inputs={[
       {
         type: 'text',
@@ -397,6 +242,8 @@ const metadata = {
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
-    description="Our support team typically responds within 24 business hours."
   />
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.5689188318565!2d-110.91468542522641!3d32.242771811098265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d671d0605d408f%3A0xfeb36a9519ecf6b8!2s1645%20N%20Winstel%20Blvd%2C%20Tucson%2C%20AZ%2085716%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1724172012954!5m2!1ses-419!2smx" width="600" height="700" style="border:0; margin:15px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
 </Layout>
