@@ -1,8 +1,8 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
+    /* {
       text: 'Homes',
       links: [
         {
@@ -22,41 +22,24 @@ export const headerData = {
           href: getPermalink('/homes/personal'),
         },
       ],
+    }, */
+    {
+      text: 'Services',
+      href: getPermalink('/#services'),
+    },
+    {
+      text: 'About',
+      href: getPermalink('/#about'),
     },
     {
       text: 'Pages',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/#blueprint'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
+      href: getPermalink('/'),
     },
     {
+      text: 'Contact',
+      href: getPermalink('/#contact'),
+    },
+    /* {
       text: 'Landing',
       links: [
         {
@@ -84,8 +67,8 @@ export const headerData = {
           href: getPermalink('/landing/subscription'),
         },
       ],
-    },
-    {
+    }, */
+    /* {
       text: 'Blog',
       links: [
         {
@@ -109,11 +92,11 @@ export const headerData = {
           href: getPermalink('astro', 'tag'),
         },
       ],
-    },
-    {
+    }, */
+    /* {
       text: 'Widgets',
       href: '#',
-    },
+    }, */
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
