@@ -9,23 +9,26 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 // import required modules
-import {Autoplay, Pagination, Navigation } from 'swiper/modules';
+import {EffectCoverflow, Pagination } from 'swiper/modules';
 
 export default function Slider() {
   return (
     <>
       <Swiper
-        autoplay={true}
-        slidesPerView={3}
+        effect={'coverflow'}
+        grabCursor={true}
         centeredSlides={true}
-        spaceBetween={30}
-        pagination={{
-          type: 'fraction',
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
-        
       >
         <SwiperSlide>
           <img src="https://st5.depositphotos.com/1007959/64911/i/450/depositphotos_649114122-stock-photo-bold-yelllow-master-bedroom-showing.jpg" />
