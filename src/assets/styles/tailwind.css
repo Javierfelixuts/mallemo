@@ -14,6 +14,12 @@
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
+  .custom-text-dark {
+    color:  var(--aw-color-bg-page);
+  }
+  .custom-bg-dark {
+    background: #1b3d6f;
+  }
   .text-page {
     color: var(--aw-color-text-page);
   }
@@ -22,7 +28,9 @@
   }
 }
 
-
+/* 
+.bg-primary
+#0161ef */
 
 @layer components {
   .btn {
