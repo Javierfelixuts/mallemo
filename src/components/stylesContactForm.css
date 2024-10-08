@@ -1,0 +1,67 @@
+/* Contenedor del formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para las etiquetas de los inputs */
+  label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  /* Estilos para los inputs de texto y el textarea */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Cambia el color del borde cuando el input está enfocado */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Estilos para el botón de envío */
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Cambia el color del botón cuando se pasa el cursor */
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #0056b3;
+  }
+  
+  /* Mensaje de confirmación */
+  p {
+    font-size: 16px;
+    color: green;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
