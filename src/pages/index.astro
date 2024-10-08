@@ -7,16 +7,20 @@ import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Slider from '~/components/Slider';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import video1 from '~/assets/videos/working_house.mp4';
+import video2 from '~/assets/videos/working_house_2.mp4';
+import video3 from '~/assets/videos/working_house_3.mp4';
 
 const metadata = {
   title: 'Mallemo Trading LLC',
   ignoreTitleTemplate: true,
 };
+
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
   <Hero
     id='home'
     actions={[
@@ -44,6 +48,8 @@ const metadata = {
       </span>
     </Fragment>
   </Hero>
+
+
 
   <FAQs
     title='ABOUT US'
@@ -82,6 +88,79 @@ const metadata = {
       },
     ]}
   />
+  <section class="mb-4" id="projects">
+
+  <div class="tabs" >
+    <ul>
+      <li><a class="tab active" href="#tab1">STEP 1</a></li>
+      <li><a class="tab" href="#tab2">STEP 2</a></li>
+      <li><a class="tab" href="#tab3">STEP 3</a></li>
+      <!-- agregar más pestañas según sea necesario -->
+    </ul>
+    
+  </div>
+  <div class="tab-content">
+    <!-- contenido de la pestaña 1 -->
+    <div id="tab1" class="content show">
+      <Hero2
+    class:list={'content show'}
+    tagline="In progress house remodeling"
+    video={video1}
+  >
+ 
+    <Fragment slot="title">
+      Modern and Functional Remodeling
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline text-justify">
+        Explore how this remodeling project transformed a <span class="font-semibold">traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
+      </span>
+    </Fragment>
+      </Hero2>
+    </div>
+    <!-- contenido de la pestaña 2 -->
+    <div id="tab2"  class="content">
+      <Hero2
+    class:list={'content show'}
+    tagline="In progress house remodeling"
+    video={video2}
+  >
+ 
+    <Fragment slot="title">
+      Modern and Functional Remodeling
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline text-justify">
+        Explore how this remodeling project transformed a <span class="font-semibold">traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
+      </span>
+    </Fragment>
+      </Hero2>
+    </div>
+
+    <div id="tab3" class="content">
+      <Hero2
+    class:list={'content show'}
+    tagline="In progress house remodeling"
+    video={video3}
+  >
+ 
+    <Fragment slot="title">
+      Modern and Functional Remodeling
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline text-justify">
+        Explore how this remodeling project transformed a <span class="font-semibold">traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
+      </span>
+    </Fragment>
+      </Hero2>
+    </div>
+    <!-- agregar más contenidos según sea necesario -->
+  </div>
+</section>
+
 
   <!-- Note Widget ******************* -->
 
@@ -220,12 +299,16 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
   />
-    <section class="relative not-prose scroll-mt-[72px] w-6/12 h-full">
+    <section class="custom-section-google-map relative not-prose scroll-mt-[72px]  h-full">
 
-      <iframe class="" title="address map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.5689188318565!2d-110.91468542522641!3d32.242771811098265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d671d0605d408f%3A0xfeb36a9519ecf6b8!2s1645%20N%20Winstel%20Blvd%2C%20Tucson%2C%20AZ%2085716%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1724172012954!5m2!1ses-419!2smx" width="100%"  style="height: 80vh;"
+      <iframe class="" title="address map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.4059646934315!2d-110.81903072390907!3d32.220233912231166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d66f4efe74628d%3A0x7f9026aaee4fa38f!2s8230%20E%20Broadway%20Blvd!5e0!3m2!1ses-419!2smx!4v1727295719986!5m2!1ses-419!2smx" width="100%"  style="height: 80vh;"
    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
  
 </div>
 
+
 </Layout>
+
+
+<script  src="src/assets/js/tabs.js"></script>

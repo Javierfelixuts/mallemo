@@ -25,3 +25,45 @@ body {
     display: block;
     width: 100%;
   }
+
+  .custom-section-google-map {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  @media (width > 800px) { 
+    .custom-section-google-map {
+      width: 50%;
+    }
+  }
+
+  .tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .tabs ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+  }
+  li > a.tab {
+    margin: 5px;
+    padding: 10px;
+  }
+  li > a.tab.active {
+    background: #030620;
+  }
+
+  .tab-content {
+    height: auto;
+  }
+  .tab-content > .content {
+    display: none;
+  }
+  .tab-content > .content.show {
+    display: flex;
+  }
