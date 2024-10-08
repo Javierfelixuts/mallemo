@@ -4,8 +4,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
+import ContactForm from '~/components/ContactForm.tsx';
 import FAQs from '~/components/widgets/FAQs.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
+/* import ContactUs from '~/components/widgets/Contact.astro'; */
 import Slider from '~/components/Slider';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import video1 from '~/assets/videos/working_house.mp4';
@@ -21,6 +22,8 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
+
+
   <Hero
     id='home'
     actions={[
@@ -272,8 +275,8 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 <div class="flex justify-center items-start flex-wrap">
 
-
-  <ContactUs
+  <ContactForm client:load />
+  <!-- <ContactUs
   classes={{
     container: "py-0 lg:py-0"
     }
@@ -298,7 +301,7 @@ const metadata = {
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
-  />
+  /> -->
     <section class="custom-section-google-map relative not-prose scroll-mt-[72px]  h-full">
 
       <iframe class="" title="address map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.4059646934315!2d-110.81903072390907!3d32.220233912231166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d66f4efe74628d%3A0x7f9026aaee4fa38f!2s8230%20E%20Broadway%20Blvd!5e0!3m2!1ses-419!2smx!4v1727295719986!5m2!1ses-419!2smx" width="100%"  style="height: 80vh;"
