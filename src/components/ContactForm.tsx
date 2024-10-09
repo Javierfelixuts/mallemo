@@ -1,6 +1,7 @@
 import React, { useState, type FormEvent } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios';
+import { SvgSpinners90RingWithBg } from './icons/loaderSvg';
 
 const ContactForm = () => {
   
@@ -10,6 +11,7 @@ const ContactForm = () => {
     message: '',
   }
   const [formData, setFormData] = useState(initFormData);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -18,6 +20,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     setFormData(initFormData)
     try {
       const response = await axios.post('/send-email.php', formData, {
@@ -37,13 +40,21 @@ const ContactForm = () => {
       console.error('Error:', error);
       alert('Error al enviar el correo');
     }
+    finally{
+      setIsLoading(false)
+    }
   };
 
   return (
-    <div className='relative px-4 md:px-6 md:py-16 text-default max-w-7xl mx-auto py-0 lg:py-0'>
+    <div className={`relative px-4 md:px-6 md:py-16 text-default max-w-7xl mx-auto py-0 lg:py-0 ${isLoading ? 'customOpacity' : '' }`}>
+     {
+      isLoading &&
+       <SvgSpinners90RingWithBg className='spinner'/>
+     }
       <div
         className="text-center flex justify-start max-w-xl mx-auto dark:bg-slate-900 shadow sm:p-6 lg:p-8 w-full backdrop-blur rounded-tr-lg rounded-tl-lg"
       >
+        
         <div className="text-left m-4 text-sm">
           <h1 className="font-bold text-left text-4xl mb-2">CONTACT US</h1>
           <address>8230 E Broadway Blvd Suite E5, Tucson, AZ 85710</address>
@@ -73,7 +84,7 @@ const ContactForm = () => {
         </div>
 
         <div className="flex flex-col max-w-xl mx-auto  backdrop-blur border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:px-6 lg:px-8 w-full">
-          <button className='btn-primary' type="submit">Contact us</button>
+          <button className='btn-primary' type="submit" disabled={isLoading}>Contact us</button>
         </div>
       </form>
     </div>

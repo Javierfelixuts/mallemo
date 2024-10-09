@@ -67,3 +67,14 @@ body {
   .tab-content > .content.show {
     display: flex;
   }
+
+  .spinner {
+    position: absolute;
+    left: calc(50% - 5rem);
+    top: calc(50% - 5rem);
+    z-index: 100;
+    font-size: 10rem;
+  }
+  .customOpacity {
+    opacity: 0.6;
+  }
