@@ -1,0 +1,17 @@
+.aspect-ratio {
+    aspect-ratio: 10 / 8;
+    width: 100%;
+}
+.tabs {
+    display: block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 400px) {
+    /* styles for screens with a minimum width of 768px */
+    .aspect-ratio {
+        aspect-ratio: 5 / 8;
+    }
+  }
