@@ -6,12 +6,11 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import ContactForm from '~/components/ContactForm.tsx';
 import FAQs from '~/components/widgets/FAQs.astro';
+import SectionVideoRemodeling from '~/components/SectionVideoRemodeling.tsx';
 /* import ContactUs from '~/components/widgets/Contact.astro'; */
 import Slider from '~/components/Slider';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import video1 from '~/assets/videos/working_house.mp4';
-import video2 from '~/assets/videos/working_house_2.mp4';
-import video3 from '~/assets/videos/working_house_3.mp4';
+
+
 
 const metadata = {
   title: 'Mallemo Trading LLC',
@@ -22,8 +21,6 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
-
   <Hero
     id='home'
     actions={[
@@ -51,7 +48,6 @@ const metadata = {
       </span>
     </Fragment>
   </Hero>
-
 
 
   <FAQs
@@ -91,77 +87,19 @@ const metadata = {
       },
     ]}
   />
-  <section class="mb-4" id="projects">
-
-  <div class="tabs" >
-    <ul>
-      <li><a class="tab active" href="#tab1">STEP 1</a></li>
-      <li><a class="tab" href="#tab2">STEP 2</a></li>
-      <li><a class="tab" href="#tab3">STEP 3</a></li>
-      <!-- agregar más pestañas según sea necesario -->
-    </ul>
+  <span id="projects"></span>
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+  <section class="mb-4" >
     
+  <div>
+    <SectionVideoRemodeling client:load />
+
   </div>
-  <div class="tab-content">
-    <!-- contenido de la pestaña 1 -->
-    <div id="tab1" class="content show">
-      <Hero2
-    class:list={'content show'}
-    tagline="In progress house remodeling"
-    video={video1}
-  >
- 
-    <Fragment slot="title">
-      Modern and Functional Remodeling
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline text-justify">
-        Explore how this remodeling project transformed a <span class="font-semibold">traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
-      </span>
-    </Fragment>
-      </Hero2>
-    </div>
-    <!-- contenido de la pestaña 2 -->
-    <div id="tab2"  class="content">
-      <Hero2
-    class:list={'content show'}
-    tagline="In progress house remodeling"
-    video={video2}
-  >
- 
-    <Fragment slot="title">
-      Modern and Functional Remodeling
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline text-justify">
-        Explore how this remodeling project transformed a <span class="font-semibold">traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
-      </span>
-    </Fragment>
-      </Hero2>
-    </div>
-
-    <div id="tab3" class="content">
-      <Hero2
-    class:list={'content show'}
-    tagline="In progress house remodeling"
-    video={video3}
-  >
- 
-    <Fragment slot="title">
-      Modern and Functional Remodeling
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline text-justify">
-        Explore how this remodeling project transformed a <span class="font-semibold">traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
-      </span>
-    </Fragment>
-      </Hero2>
-    </div>
     <!-- agregar más contenidos según sea necesario -->
-  </div>
 </section>
 
 
@@ -170,9 +108,10 @@ const metadata = {
 
   <!-- Features Widget *************** -->
    <Slider client:visible ></Slider>
-  
+   <span id="services"></span>
+   <br />
   <Features
-    id="services"
+    
     title="What we offer"
     items={[
       {
@@ -216,9 +155,8 @@ const metadata = {
 <!-- Swiper -->
  
   <!-- Content Widget **************** -->
-
+  <span id="about"></span>
   <Content
-    id="about"
     isReversed
     title="Mallemo is your guide in the remodeling of your home"
     items={[
@@ -273,8 +211,10 @@ const metadata = {
   /> -->
 
   <!-- CallToAction Widget *********** -->
-<div class="flex justify-center items-start flex-wrap">
-
+   <span id="contact"></span>
+<br />
+<br />
+<div  class="mt-12 flex justify-center items-start flex-wrap">
   <ContactForm client:load />
   <!-- <ContactUs
   classes={{

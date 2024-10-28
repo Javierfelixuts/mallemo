@@ -29,13 +29,14 @@ export const headerData = {
       href: getPermalink('/#home'),
     },
     {
+      text: 'Projects',
+      href: getPermalink('/#projects'),
+    },
+    {
       text: 'Services',
       href: getPermalink('/#services'),
     },
-    {
-      text: 'projects',
-      href: getPermalink('/#projects'),
-    },
+    
     {
       text: 'About',
       href: getPermalink('/#about'),

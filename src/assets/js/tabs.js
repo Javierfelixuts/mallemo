@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll('.tab');
+/* const tabs = document.querySelectorAll('.tab');
 
 tabs.forEach((element) => element.addEventListener('click', function(){
     tabs.forEach(l => l.classList.remove('active'));
@@ -14,3 +14,4 @@ tabs.forEach((element) => element.addEventListener('click', function(){
     content.classList.add('show');
 }));
 
+ */
