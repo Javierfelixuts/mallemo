@@ -15,6 +15,7 @@ const {
   items = [],
   columns,
   image = await Astro.slots.render('image'),
+  items2 = [],
   isReversed = false,
   isAfterContent = false,
 
@@ -70,7 +71,7 @@ const {
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {
-          image && (
+          image ? (
             <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
@@ -86,6 +87,21 @@ const {
                 />
               )}
             </div>
+          ) : (
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Advantages of new homes</h3>
+          <ItemGrid
+          items={items2}
+          columns={columns}
+          defaultIcon="tabler:check"
+          classes={{
+            container: `gap-y-4 md:gap-y-8`,
+            panel: 'max-w-none',
+            title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+            description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
+            icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1',
+            action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+          }}
+        />
           )
         }
       </div>

@@ -1,5 +1,5 @@
 site:
-  name: Mallemo Trading LLC
+  name: Mallemo Trading LLC DBA Real Estate Focus
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
