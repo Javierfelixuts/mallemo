@@ -12,7 +12,7 @@ const SectionVideoRemodeling = () => {
           Modern and Functional Remodeling
         </h1> <div className="max-w-3xl mx-auto lg:max-w-none text-justify"> 
           <p className="text-xl text-muted mb-6 dark:text-slate-300"> <span className="sm:inline text-justify" data-astro-source-file="C:/projects/mallemo/mallemo/src/pages/index.astro" data-astro-source-loc="121:51">
-          Explore how this remodeling project transformed a <span className="font-semibold" data-astro-source-file="C:/projects/mallemo/mallemo/src/pages/index.astro" >traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. Watch the full transformation process and the stunning final results in this video!
+          Explore how this remodeling project transformed a <span className="font-semibold" data-astro-source-file="C:/projects/mallemo/mallemo/src/pages/index.astro" >traditional house into a modern, functional, and stylish home.</span> With careful attention to detail, we redesigned every corner to enhance the aesthetics and maximize space efficiency. From a contemporary kitchen redesign to the renovation of bathrooms and living areas, each element was thoughtfully crafted to provide comfort and beauty. ¡watch the full transformation process and the stunning final results in this video!
         </span>
         </p>
           </div>

@@ -8,7 +8,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import SectionVideoRemodeling from '~/components/SectionVideoRemodeling.tsx';
 /* import ContactUs from '~/components/widgets/Contact.astro'; */
 import Slider from '~/components/Slider';
-
+import SliderOffice from '~/components/SliderOffice';
 
 
 const metadata = {
@@ -23,22 +23,23 @@ const metadata = {
   <Hero
     id='home'
     
-    image={{ src: '~/assets/images/clean-house-03.jpeg', alt: 'house for remodeling' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'house for remodeling' }}
   >
     <Fragment 
       slot="title">
       
-      <span class="uppercase">Purchase of 
-      <span class="text-accent dark:text-white highlight"> dilapidated</span> house for remodeling And new home construction
+      <span class="uppercase">Purchase of
+      <span class="text-accent dark:text-white highlight"> a Dilapidated</span> House for Remodeling and New Home Construction.
       </span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Incorporate</span> the latst trends and technologies in our remodeling to offer modern. efficient and high value-added properties
+        <span class="font-semibold">Incorporate</span> the latest trends and technologies in our remodeling to offer modern, efficient and high value-added properties.
       </span>
     </Fragment>
   </Hero>
+  <span id="about"></span>
 
 
   <FAQs
@@ -47,9 +48,9 @@ const metadata = {
     items={[
       {
         
-        title: 'Mision',
+        title: 'Mission',
         description:
-          "To transform properties into exceptional homes, creating value for our clients trough innovative and sustainable remodels that enhace quality of life and revitalize communities.",
+          "To transform properties into exceptional homes, creating value for our clients through innovative and sustainable remodels that enhance quality of life and revitalize communities.",
       },
       {
         title: 'Vision',
@@ -59,7 +60,7 @@ const metadata = {
       {
         title: 'Goals',
         description:
-          "Quality in Remodeling: To ensure that each remodeled property meets the highest standards of quality, functionality and aesthetics, exceeding our client’s expectations.",
+          "Quality in Remodeling: To ensure that each remodeled property meets the highest standards of quality, functionality and aesthetics, exceeding our clients expectations.",
       },
       {
         title: "Sustainable Growth",
@@ -69,7 +70,7 @@ const metadata = {
       {
         title: 'Innovation in Design',
         description:
-          " Incorporate the latest trends and technologies in our remodeling to offer modern, efficient and high value-added properties.",
+          " Incorporate the latest trends and technologies in our remodeling to offer modern, efficient and high-value-added properties.",
       },
       {
         title: 'Community Contribution',
@@ -105,7 +106,6 @@ const metadata = {
 <!-- Swiper -->
  
   <!-- Content Widget **************** -->
-  <span id="about"></span>
   <Content
     isReversed
     title="Mallemo is your guide in the remodeling of your home"
@@ -137,12 +137,12 @@ const metadata = {
       {
         title: 'Personalization: ',
         description:
-          'llowing you to create a living space that truly meets your needs.',
+          'Allowing you to create a living space that truly meets your needs.',
       },
       {
         title: 'Low maintenance: ',
         description:
-          'less maintenance than older homes, which can save you time and stress.',
+          'Less maintenance than older homes, which can save you time and stress.',
       },
       {
         title: 'Technology: ',
@@ -186,6 +186,7 @@ const metadata = {
    <span id="contact"></span>
 <br />
 <br />
+<SliderOffice client:visible ></SliderOffice>
 <div  class="mt-12 flex justify-center items-start flex-wrap">
   <ContactForm client:load />
   <!-- <ContactUs

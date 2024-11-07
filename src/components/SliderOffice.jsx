@@ -5,19 +5,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import image_01 from "~/assets/images/clean-house-02.jpeg"
-import image_05 from "~/assets/images/clean-house-05.jpeg"
-import image_06 from "~/assets/images/clean-house-06.jpeg"
-import image_07 from "~/assets/images/clean-house-07.jpeg"
-import image_08 from "~/assets/images/clean-house-08.jpeg"
-import image_09 from "~/assets/images/clean-house-09.jpeg"
+import office_01 from "~/assets/images/office_01.jpeg"
+import office_02 from "~/assets/images/office_02.jpeg"
+import office_03 from "~/assets/images/office_03.jpeg"
+import office_04 from "~/assets/images/office_04.jpeg"
+import office_05 from "~/assets/images/office_05.jpeg"
+import office_06 from "~/assets/images/office_06.jpeg"
 import './styles.css';
 
 // import required modules
 import {EffectCoverflow, Pagination } from 'swiper/modules';
 
-export default function Slider() {
-  console.log("image_01: ", image_01);
+export default function SliderOffice() {
   return (
     <>
       <Swiper
@@ -37,23 +36,23 @@ export default function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img alt="modern-house"  src={image_01.src} />
+          <img alt="modern-house"  src={office_01.src} />
         </SwiperSlide>
         <SwiperSlide>
-          <img alt="modern-house" src={image_05.src} />
+          <img alt="modern-house" src={office_02.src} />
         </SwiperSlide>
        
         <SwiperSlide>
-          <img alt="modern-house" src={image_07.src} />
+          <img alt="modern-house" src={office_03.src} />
         </SwiperSlide>
         <SwiperSlide>
-          <img alt="modern-house" src={image_06.src} />
+          <img alt="modern-house" src={office_04.src} />
         </SwiperSlide>
         <SwiperSlide>
-          <img alt="modern-house" src={image_08.src} />
+          <img alt="modern-house" src={office_05.src} />
         </SwiperSlide>
         <SwiperSlide>
-          <img alt="modern-house" src={image_09.src} />
+          <img alt="modern-house" src={office_06.src} />
         </SwiperSlide>
         
       </Swiper>

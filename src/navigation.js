@@ -29,17 +29,16 @@ export const headerData = {
       href: getPermalink('/#home'),
     },
     {
+      text: 'About',
+      href: getPermalink('/#about'),
+    },
+    {
       text: 'Projects',
       href: getPermalink('/#projects'),
     },
     {
       text: 'Services',
       href: getPermalink('/#services'),
-    },
-    
-    {
-      text: 'About',
-      href: getPermalink('/#about'),
     },
     {
       text: 'Contact',
@@ -121,10 +120,10 @@ export const footerData = {
     
     
   ],
-  secondaryLinks: [
+  /* secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+  ], */
   socialLinks: [
   ],
   footNote: `

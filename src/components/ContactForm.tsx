@@ -63,13 +63,13 @@ const ContactForm = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col max-w-xl mx-auto  backdrop-blur border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-2 sm:px-6 lg:px-8 w-full">
-          <input className='py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900' type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Nombre" required />
+          <input className='py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900' type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
         </div>
         <div className="flex flex-col max-w-xl mx-auto  backdrop-blur border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-2 sm:px-6 lg:px-8 w-full">
           <input className='py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900' type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
         </div>
         <div className="flex flex-col max-w-xl mx-auto  backdrop-blur border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-2 sm:px-6 lg:px-8 w-full">
-          <textarea className='py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900' name="message" value={formData.message} onChange={handleChange} placeholder="Mensaje" required />
+          <textarea className='py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900' name="message" value={formData.message} onChange={handleChange} placeholder="Message" required />
         </div>
 
         <div className="items-start flex max-w-xl mx-auto  backdrop-blur border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-2 sm:px-6 lg:px-8 w-full"  > 
